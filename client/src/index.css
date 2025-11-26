@@ -1,0 +1,60 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #FBE05F;
+  --color-primaryHover: #EAC138;
+  --color-secondary: #FFF9C1;
+}
+
+body {
+  background-color: #FFF9C1;
+  /* User specified light yellow */
+  background-image: linear-gradient(to bottom right, #FFF9C1, #FFFFFF);
+  /* Subtle gradient */
+  color: #1F2937;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(10px, -15px) rotate(5deg);
+  }
+
+  50% {
+    transform: translate(0, -5px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(-10px, -15px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.animate-fly {
+  animation: fly 3s ease-in-out infinite;
+}
+
+.btn-primary {
+  @apply bg-primary text-gray-900 font-bold py-4 px-8 rounded-full shadow-lg transition-all duration-300;
+}
+
+.btn-primary:hover {
+  @apply bg-primaryHover transform -translate-y-1 shadow-xl brightness-105;
+}
+
+.btn-secondary {
+  @apply bg-white text-gray-900 border-2 border-gray-100 font-bold py-4 px-8 rounded-full shadow-md transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply border-primary bg-gray-50 transform -translate-y-1 shadow-lg;
+}
