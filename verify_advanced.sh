@@ -41,7 +41,6 @@ echo "Testing Sort..."
 curl -s -X GET "http://localhost:5001/api/habits?sort=name" \
   -H "Authorization: Bearer $TOKEN" > /dev/null && echo "Sort Passed"
 
-# 6. Test Pagination
 echo "Testing Pagination (limit=1)..."
 curl -s -X GET "http://localhost:5001/api/habits?limit=1&page=1" \
   -H "Authorization: Bearer $TOKEN" | grep "totalPages" && echo "Pagination Passed"
