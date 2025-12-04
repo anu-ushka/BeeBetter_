@@ -18,6 +18,7 @@ connectDB();
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/habits', require('./routes/habitRoutes'));
+app.use('/api/journals', require('./routes/journalRoutes'));
 
 app.get('/', (req, res) => {
     res.send('BeeBetter API is running');

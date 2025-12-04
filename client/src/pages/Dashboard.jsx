@@ -141,6 +141,9 @@ const Dashboard = () => {
                         <p className="text-gray-400 font-medium">
                             "You are a little bit better than you were yesterday."
                         </p>
+                        <a href="/journal" className="text-primaryHover font-bold hover:underline mt-2 inline-block">
+                            Go to Journal &rarr;
+                        </a>
                     </div>
 
                     {/* Controls */}

@@ -3,9 +3,7 @@ const router = express.Router();
 const Habit = require('../models/Habit');
 const { protect } = require('../middleware/authMiddleware');
 
-// @desc    Get all habits (with search, filter, sort, pagination)
-// @route   GET /api/habits
-// @access  Private
+
 router.get('/', protect, async (req, res) => {
     try {
         const { search, category, status, sort, page = 1, limit = 10 } = req.query;
