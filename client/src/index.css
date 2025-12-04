@@ -9,9 +9,7 @@
 
 body {
   background-color: #FFF9C1;
-  /* User specified light yellow */
   background-image: linear-gradient(to bottom right, #FFF9C1, #FFFFFF);
-  /* Subtle gradient */
   color: #1F2937;
   font-family: 'Inter', sans-serif;
   min-height: 100vh;
