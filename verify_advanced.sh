@@ -30,7 +30,6 @@ echo "Testing Search (query='Code')..."
 curl -s -X GET "http://localhost:5001/api/habits?search=Code" \
   -H "Authorization: Bearer $TOKEN" | grep "Code" && echo "Search Passed" || echo "Search Failed"
 
-# 4. Test Filter
 echo "Testing Filter (category='Health')..."
 curl -s -X GET "http://localhost:5001/api/habits?category=Health" \
   -H "Authorization: Bearer $TOKEN" | grep "Exercise" && echo "Filter Passed" || echo "Filter Failed"
