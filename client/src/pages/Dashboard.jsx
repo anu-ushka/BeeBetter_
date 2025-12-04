@@ -45,7 +45,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchHabits();
-    }, [user, filter, search, page]); // Re-fetch when page changes
+    }, [user, filter, search, page]); 
 
     const addHabit = async (e) => {
         e.preventDefault();
