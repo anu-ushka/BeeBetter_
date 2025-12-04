@@ -1,6 +1,3 @@
-#!/bin/bash
-
-# 1. Signup
 EMAIL="test_adv_$(date +%s)@example.com"
 echo "Signup..."
 RESP=$(curl -s -X POST http://localhost:5001/api/auth/signup \
@@ -8,7 +5,6 @@ RESP=$(curl -s -X POST http://localhost:5001/api/auth/signup \
   -d "{\"name\":\"Adv User\",\"email\":\"$EMAIL\",\"password\":\"password123\"}")
 TOKEN=$(echo $RESP | grep -o '"token":"[^"]*' | cut -d'"' -f4)
 
-# 2. Create Habits
 echo "Creating habits..."
 curl -s -X POST http://localhost:5001/api/habits \
   -H "Content-Type: application/json" \
@@ -25,7 +21,6 @@ curl -s -X POST http://localhost:5001/api/habits \
   -H "Authorization: Bearer $TOKEN" \
   -d '{"name":"Code","category":"Productivity"}' > /dev/null
 
-# 3. Test Search
 echo "Testing Search (query='Code')..."
 curl -s -X GET "http://localhost:5001/api/habits?search=Code" \
   -H "Authorization: Bearer $TOKEN" | grep "Code" && echo "Search Passed" || echo "Search Failed"
