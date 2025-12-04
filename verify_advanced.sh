@@ -35,8 +35,6 @@ echo "Testing Filter (category='Health')..."
 curl -s -X GET "http://localhost:5001/api/habits?category=Health" \
   -H "Authorization: Bearer $TOKEN" | grep "Exercise" && echo "Filter Passed" || echo "Filter Failed"
 
-# 5. Test Sort (assuming default is new first, so Code should be first)
-# This is hard to grep, but we can just check if it returns.
 echo "Testing Sort..."
 curl -s -X GET "http://localhost:5001/api/habits?sort=name" \
   -H "Authorization: Bearer $TOKEN" > /dev/null && echo "Sort Passed"
