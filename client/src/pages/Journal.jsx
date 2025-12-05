@@ -15,12 +15,10 @@ const Journal = () => {
     const [showModal, setShowModal] = useState(false);
     const [editingJournal, setEditingJournal] = useState(null);
 
-    // Pagination State
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const LIMIT = 6;
 
-    // Form State
     const [formData, setFormData] = useState({
         title: '',
         content: '',
