@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className="min-h-screen flex flex-col bg-transparent relative overflow-hidden font-sans">
-            {/* Background Pattern (Subtle) */}
             <div className="absolute inset-0 z-0 opacity-30 pointer-events-none"
                 style={{
                     backgroundImage: 'radial-gradient(#E5E7EB 1px, transparent 1px)',
