@@ -33,7 +33,6 @@ const Login = () => {
 
             <div className="bg-white p-10 rounded-3xl shadow-xl w-full max-w-md relative z-10 border border-gray-100">
                 <div className="flex flex-col items-center mb-8">
-                    {/* Bee with white background container */}
                     <div className="bg-white p-4 rounded-full shadow-md mb-4 border border-gray-50">
                         <img src="/bee-logo.png" alt="BeeBetter Logo" className="w-16 h-16 object-contain" />
                     </div>
