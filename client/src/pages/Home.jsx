@@ -27,18 +27,15 @@ const Home = () => {
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-primary opacity-20 rounded-full blur-3xl -z-10"></div>
                 </div>
 
-                {/* Heading */}
                 <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 mb-6 tracking-tight drop-shadow-sm">
                     BeeBetter
                 </h1>
 
-                {/* Subheading */}
                 <p className="text-gray-600 text-xl mb-12 font-medium max-w-lg mx-auto leading-relaxed">
                     Build Better Habits. Stay Consistent. <br />
                     <span className="text-gray-500 text-lg">Track your journey one day at a time.</span>
                 </p>
 
-                {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-6 w-full max-w-md justify-center">
                     <Link
                         to="/signup"
@@ -55,7 +52,6 @@ const Home = () => {
                 </div>
             </main>
 
-            {/* Footer */}
             <footer className="relative z-10 p-6 text-center text-gray-400 text-sm">
             </footer>
         </div>
