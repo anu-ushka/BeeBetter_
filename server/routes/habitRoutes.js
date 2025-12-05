@@ -17,7 +17,7 @@ router.get('/', protect, async (req, res) => {
         if (category) {
             query.category = category;
         }
-        // Status filter (completed/pending) - simplified logic for daily habits
+
         if (status === 'completed') {
             // This is complex for "daily" habits, usually means completed TODAY.
             // For now, let's assume it checks if the last completedDate is today.
