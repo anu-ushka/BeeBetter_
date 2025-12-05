@@ -87,7 +87,6 @@ router.put('/:id', protect, async (req, res) => {
         habit.category = req.body.category || habit.category;
         habit.frequency = req.body.frequency || habit.frequency;
 
-        // Check for completion toggle
         if (req.body.completed !== undefined) {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
@@ -102,7 +101,6 @@ router.put('/:id', protect, async (req, res) => {
                 habit.completedDates.push(new Date());
                 habit.streak += 1;
             } else if (!req.body.completed && isCompletedToday) {
-                // Remove today from completedDates
                 habit.completedDates = habit.completedDates.filter(date => {
                     const d = new Date(date);
                     d.setHours(0, 0, 0, 0);
