@@ -19,8 +19,6 @@ router.get('/', protect, async (req, res) => {
         }
 
         if (status === 'completed') {
-            // This is complex for "daily" habits, usually means completed TODAY.
-            // For now, let's assume it checks if the last completedDate is today.
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             query.completedDates = { $gte: today };
