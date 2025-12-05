@@ -31,7 +31,6 @@ router.get('/', protect, async (req, res) => {
             // Let's omit complex status filter in DB query for now and handle basic fields.
         }
 
-        // Sort
         let sortOption = { createdAt: -1 }; // Default: Newest first
         if (sort === 'oldest') sortOption = { createdAt: 1 };
         if (sort === 'streak') sortOption = { streak: -1 };
