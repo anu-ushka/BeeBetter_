@@ -187,7 +187,6 @@ const Journal = () => {
                         </div>
                     </div>
 
-                    {/* Controls */}
                     <div className="flex items-center bg-white p-2 rounded-full shadow-sm border border-gray-100">
                         <div className="relative">
                             <Search size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -223,7 +222,6 @@ const Journal = () => {
                     </div>
                 </header>
 
-                {/* Journal Grid */}
                 {loading ? (
                     <div className="text-center py-20 text-gray-400">Loading journals...</div>
                 ) : (
@@ -287,7 +285,7 @@ const Journal = () => {
                     </div>
                 )}
 
-                {/* Pagination */}
+
                 {totalPages > 1 && (
                     <div className="flex justify-center items-center gap-4 mt-12">
                         <button
@@ -314,7 +312,6 @@ const Journal = () => {
 
             </div>
 
-            {/* Floating Action Button */}
             <button
                 onClick={() => openModal()}
                 className="fixed bottom-8 right-8 bg-primary hover:bg-primaryHover text-gray-900 p-4 rounded-full shadow-lg transition transform hover:scale-105"
@@ -322,7 +319,7 @@ const Journal = () => {
                 <Plus size={28} />
             </button>
 
-            {/* Modal */}
+
             {showModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm">
                     <div className="bg-white p-8 rounded-3xl shadow-xl w-full max-w-lg relative animate-in fade-in zoom-in duration-200">
