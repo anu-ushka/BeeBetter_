@@ -16,7 +16,7 @@ const habitSchema = mongoose.Schema(
             required: true,
         },
         frequency: {
-            type: String, // daily, weekly
+            type: String,
             default: 'daily',
         },
         completedDates: [
