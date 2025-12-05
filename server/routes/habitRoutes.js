@@ -25,10 +25,6 @@ router.get('/', protect, async (req, res) => {
         } else if (status === 'pending') {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            // unless we use aggregation.
-            // Let's stick to basic filters for now or handle in memory if dataset is small, 
-            // but for pagination we should do it in DB.
-            // Let's omit complex status filter in DB query for now and handle basic fields.
         }
 
         let sortOption = { createdAt: -1 };
