@@ -25,8 +25,6 @@ router.get('/', protect, async (req, res) => {
         } else if (status === 'pending') {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-            // This is harder to query directly in mongo without aggregation, 
-            // but for simplicity let's just fetch and filter or skip this specific complex filter for MVP 
             // unless we use aggregation.
             // Let's stick to basic filters for now or handle in memory if dataset is small, 
             // but for pagination we should do it in DB.
