@@ -22,8 +22,7 @@ router.get('/', protect, async (req, res) => {
             query.mood = mood;
         }
 
-        // Sort
-        let sortOption = { createdAt: -1 }; // Default: Newest first
+        let sortOption = { createdAt: -1 }; 
         if (sort === 'oldest') sortOption = { createdAt: 1 };
         if (sort === 'title') sortOption = { title: 1 };
 
