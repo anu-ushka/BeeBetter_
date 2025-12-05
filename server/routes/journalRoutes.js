@@ -11,7 +11,6 @@ router.get('/', protect, async (req, res) => {
         const { search, mood, sort, page = 1, limit = 10 } = req.query;
         const query = { user: req.user._id };
 
-        // Search
         if (search) {
             query.$or = [
                 { title: { $regex: search, $options: 'i' } },
@@ -19,7 +18,6 @@ router.get('/', protect, async (req, res) => {
             ];
         }
 
-        // Filter
         if (mood) {
             query.mood = mood;
         }
