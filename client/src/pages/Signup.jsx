@@ -24,7 +24,6 @@ const Signup = () => {
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-transparent relative overflow-hidden font-sans">
-            {/* Background Pattern */}
             <div className="absolute inset-0 z-0 opacity-40 pointer-events-none"
                 style={{
                     backgroundImage: 'radial-gradient(#E5E7EB 1px, transparent 1px)',
@@ -34,7 +33,6 @@ const Signup = () => {
 
             <div className="bg-white p-10 rounded-3xl shadow-xl w-full max-w-md relative z-10 border border-gray-100">
                 <div className="text-center mb-8 flex flex-col items-center">
-                    {/* Bee with white background container */}
                     <div className="bg-white p-4 rounded-full shadow-md mb-4 border border-gray-50">
                         <img src="/bee-logo.png" alt="BeeBetter Logo" className="w-16 h-16 object-contain" />
                     </div>
